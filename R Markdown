@@ -1,0 +1,35 @@
+---
+title: "Module 12"
+author: Beatriz Sandin
+date: "2023-04-02"
+output: html_document
+---
+
+## R Markdown
+
+### Packages
+
+```{r setup, include=FALSE}
+#install.packages("rmarkdown")
+library(rmarkdown)
+library(ggplot2)
+```
+
+### Dataset Summary
+
+```{r}
+summary(mtcars)
+```
+
+### ggplot2 Scatterplot
+
+```{r}
+ggplot(mtcars, aes(x = mpg, y = wt)) +
+  geom_point(aes(size = gear), color = "black", stroke = 1, shape = 21, fill = "orange") +
+  geom_smooth(method = "lm", color = "blue") +
+  xlab("Miles per gallon") + ylab("Weight (1000 lbs)")
+```
+
+### Reflection
+
+#### This R Markdown assignment was very simple to understand and fun to experiment with new ggplot2 package options for scatterplots. 
